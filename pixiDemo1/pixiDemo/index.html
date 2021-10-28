@@ -11,7 +11,7 @@
     <script>
     	//背景大小为3600*2700  
     	//所有图片都缩小一倍
-		var app = new PIXI.Application(3600,2700);
+		var app = new PIXI.Application(1200,900);
         document.body.appendChild(app.view);
         
         //添加背景图片
@@ -22,7 +22,7 @@
    		var firstBuilding = new PIXI.Sprite.fromImage("res/3.png");
    		app.stage.addChild(firstBuilding);
    		firstBuilding.x = 0;
-   		firstBuilding.y = 300;
+   		firstBuilding.y = 100;
    		
         //添加大桥图片
         var bridge = new PIXI.Sprite.fromImage("res/1.png");
@@ -31,8 +31,8 @@
         //添加建筑2 玉米楼
         var secondBuilding = new PIXI.Sprite.fromImage("res/2.png");
         app.stage.addChild(secondBuilding);
-        secondBuilding.x = 1400;
-        secondBuilding.y = 400;
+        secondBuilding.x = 466;
+        secondBuilding.y = 133;
         
         //添加小人1 舞龙
         var personOneList=[];
@@ -42,14 +42,14 @@
         personOne.play();
         personOne.animationSpeed = 0.02;
         app.stage.addChild(personOne);
-        personOne.x = 1200;
-        personOne.y = 1950;  
+        personOne.x = 400;
+        personOne.y = 650;  
         
         //添加小人2 敲锣  res/人03.png待定
         var personTwo = new PIXI.Sprite.fromImage("res/人04.png");
         app.stage.addChild(personTwo);
-        personTwo.x = 2600;
-        personTwo.y = 850;
+        personTwo.x = 866;
+        personTwo.y = 283;
         
        
         
@@ -62,8 +62,8 @@
         personThree.play();
         personThree.animationSpeed = 0.01;
         app.stage.addChild(personThree);
-        personThree.x = 2200;
-        personThree.y = 1200;
+        personThree.x = 733;
+        personThree.y = 400;
         
         //添加小人4 大镲
         var personFourList=[];
@@ -73,8 +73,8 @@
         personFour.play();
         personFour.animationSpeed = 0.06;
         app.stage.addChild(personFour);
-        personFour.x = 2700;
-        personFour.y = 1300;
+        personFour.x = 900;
+        personFour.y = 433;
         
         //添加小人5 舞龙龙头
         var personFiveList=[];
@@ -84,8 +84,8 @@
         personFive.play();
         personFive.animationSpeed = 0.01;
         app.stage.addChild(personFive);
-        personFive.x = 200;
-        personFive.y = 1950; 
+        personFive.x = 66;
+        personFive.y = 650; 
         
         
         
@@ -112,7 +112,7 @@
         	if(twoIsPick==false){
         		twoIsPick = true;
         		personTwoIntroduction.visible = true;
-        	} 
+        	}  
         }
         
         //再次点击或者触碰离开屏幕 图片2消失
@@ -123,11 +123,17 @@
         	}
         }  
         
+        app.ticker.add(animate);
+        function animate(){
+        	personTwoIntroduction.on("mousemove",move);
+            personTwoIntroduction.on("touchmove",move);
+        }
+        
         function move(event){
         	var pos = event.data.getLocalPosition(app.stage);
         	personTwoIntroduction.x = pos.x;
         	personTwoIntroduction.y = pos.y;
-        }
+        }  
         
        
         
