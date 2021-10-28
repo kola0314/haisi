@@ -102,11 +102,13 @@
         personTwoIntroduction.interactive = true;
         personTwoIntroduction.visible = false;
         personTwoIntroduction.anchor.set(0.5,0.5);
-        personTwoIntroduction.on("mousemove",move);
-        personTwoIntroduction.on("touchmove",move);
+//      personTwoIntroduction.on("mousemove",move);
+//      personTwoIntroduction.on("touchmove",move);
         personTwoIntroduction.on("click",stopTwo);
         personTwoIntroduction.on("touchend",stopTwo);
         
+        personTwoIntroduction.x = 1015;
+        personTwoIntroduction.y = 400;
         //点击或触碰小人2 显示图片2
         function pickTwo(){
         	if(twoIsPick==false){
@@ -122,18 +124,7 @@
         		personTwoIntroduction.visible = false;
         	}
         }  
-        
-        app.ticker.add(animate);
-        function animate(){
-        	personTwoIntroduction.on("mousemove",move);
-            personTwoIntroduction.on("touchmove",move);
-        }
-        
-        function move(event){
-        	var pos = event.data.getLocalPosition(app.stage);
-        	personTwoIntroduction.x = pos.x;
-        	personTwoIntroduction.y = pos.y;
-        }  
+       
         
        
         
