@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="js/pixi.min.js"></script>
+    <script>
+    	//背景大小为3600*2700  
+    	//所有图片都缩小一倍
+		var app = new PIXI.Application(1200,900);
+        document.body.appendChild(app.view);
+        
+        //添加背景图片
+        var bg=new PIXI.Sprite.fromImage("res/secondMap.jpg");
+        app.stage.addChild(bg);
+        
+        //添加建筑1
+   		var firstBuilding = new PIXI.Sprite.fromImage("res/3.png");
+   		app.stage.addChild(firstBuilding);
+   		firstBuilding.x = 0;
+   		firstBuilding.y = 100;
+   		
+        //添加大桥图片
+        var bridge = new PIXI.Sprite.fromImage("res/1.png");
+        app.stage.addChild(bridge);
+        
+        //添加建筑2 玉米楼
+        var secondBuilding = new PIXI.Sprite.fromImage("res/2.png");
+        app.stage.addChild(secondBuilding);
+        secondBuilding.x = 466;
+        secondBuilding.y = 133;
+        
+        //添加小人1 舞龙
+        var personOneList=[];
+        personOneList.push("res/人01.png");
+        personOneList.push("res/人02.png")
+        var personOne = new PIXI.extras.AnimatedSprite.fromImages(personOneList);
+        personOne.play();
+        personOne.animationSpeed = 0.02;
+        app.stage.addChild(personOne);
+        personOne.x = 400;
+        personOne.y = 650;  
+        
+        //添加小人2 敲锣  res/人03.png待定
+        var personTwo = new PIXI.Sprite.fromImage("res/人04.png");
+        app.stage.addChild(personTwo);
+        personTwo.x = 866;
+        personTwo.y = 283;
+        
+       
+        
+        
+        //添加小人3 击鼓
+        var personThreeList=[];
+        personThreeList.push("res/人05.png");
+        personThreeList.push("res/人06.png")
+        var personThree = new PIXI.extras.AnimatedSprite.fromImages(personThreeList);
+        personThree.play();
+        personThree.animationSpeed = 0.01;
+        app.stage.addChild(personThree);
+        personThree.x = 733;
+        personThree.y = 400;
+        
+        //添加小人4 大镲
+        var personFourList=[];
+        personFourList.push("res/小知03.png");
+        personFourList.push("res/小知04.png")
+        var personFour = new PIXI.extras.AnimatedSprite.fromImages(personFourList);
+        personFour.play();
+        personFour.animationSpeed = 0.06;
+        app.stage.addChild(personFour);
+        personFour.x = 900;
+        personFour.y = 433;
+        
+        //添加小人5 舞龙龙头
+        var personFiveList=[];
+        personFiveList.push("res/小知01.png");
+        personFiveList.push("res/小知02.png")
+        var personFive = new PIXI.extras.AnimatedSprite.fromImages(personFiveList);
+        personFive.play();
+        personFive.animationSpeed = 0.01;
+        app.stage.addChild(personFive);
+        personFive.x = 66;
+        personFive.y = 650; 
+        
+        
+        
+        
+         //添加小人2点击判断
+        var twoIsPick = false;
+        personTwo.interactive = true;
+        personTwo.on("click",pickTwo);
+        personTwo.on("touchstart",pickTwo);
+        
+        //添加小人2介绍 一开始隐藏
+        var personTwoIntroduction = new PIXI.Sprite.fromImage("res/图2.png");
+        app.stage.addChild(personTwoIntroduction);
+        personTwoIntroduction.interactive = true;
+        personTwoIntroduction.visible = false;
+        personTwoIntroduction.anchor.set(0.5,0.5);
+//      personTwoIntroduction.on("mousemove",move);
+//      personTwoIntroduction.on("touchmove",move);
+        personTwoIntroduction.on("click",stopTwo);
+        personTwoIntroduction.on("touchend",stopTwo);
+        
+        personTwoIntroduction.x = 1015;
+        personTwoIntroduction.y = 400;
+        //点击或触碰小人2 显示图片2
+        function pickTwo(){
+        	if(twoIsPick==false){
+        		twoIsPick = true;
+        		personTwoIntroduction.visible = true;
+        	}  
+        }
+        
+        //再次点击或者触碰离开屏幕 图片2消失
+        function stopTwo(){
+        	if(twoIsPick==true){
+        		twoIsPick = false;
+        		personTwoIntroduction.visible = false;
+        	}
+        }  
+       
+        
+       
+        
+    </script>
+</body>
+</html>
