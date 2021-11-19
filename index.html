@@ -48,35 +48,35 @@
 				width: 35%;
 				cursor: pointer;
 			}
-			.xiaozhi01 {
+			#xiaozhi01 {
 				position: absolute;
 				width: 40%;
-				left: 15%;
+				left: 45%;
 				top: 70%;
 				z-index: 3;
 			}
-			.xiaozhi03 {
+			#xiaozhi03 {
 				position: absolute;
 				width: 30%;
 				right: 83%;
 				top: 40%;
 				z-index: 3;
 			}
-			.person01{
+			#person01{
 				position: absolute;
 				width: 40%;
-				left: 40%;
-				top: 70%;
+				left: 0%;
+				top: 50%;
 				z-index: 3;
 			}
-			.person03{
+			#person03{
 				position: absolute;
 				width: 40%;
 				left: 75%;
 				top: 50%;
 				z-index: 3;
 			}
-			.person05{
+			#person05{
 				position: absolute;
 				width: 40%;
 				left: 65%;
@@ -100,16 +100,89 @@
     		<!--教堂 -->
 				<div class="church"><img src="res/church.png"/></div>  
     		<!--小知1 -->
-				<img class="xiaozhi01" src="res/xiaozhi01.png"/>
+				<img id="xiaozhi01" />
 			<!--小知2 -->
-				<img class="xiaozhi03" src="res/xiaozhi03.png"/>	
+				<img id="xiaozhi03" />	
 			<!--舞龙 -->
-				<img class="person01" src="res/person01.png"/>
+				<img id="person01" />
 			<!--敲锣 -->
-				<img class="person03" src="res/person03.png"/>
+				<img id="person03" />
 			<!--击鼓 -->
-				<img class="person05" src="res/person05.png"/>
+				<img id="person05" />
     		</div>
+    		<script>
+    			    var curIndex=0;//当前下标
+    				var arr=new Array();//图片数组
+    				arr[0]="res/xiaozhi01.png";//图片路径
+    				arr[1]="res/xiaozhi02.png";
+    				setInterval(function(){
+    				var ob=document.getElementById("xiaozhi01");
+    				if (curIndex==arr.length-1){
+        				curIndex=0;
+    				}else{
+        				curIndex+=1;
+    				}
+    				ob.src=arr[curIndex];
+    				},1000);
+    				
+    				var curIndex=0;//当前下标
+    				var arr1=new Array();//图片数组
+    				arr1[0]="res/xiaozhi03.png";//图片路径
+    				arr1[1]="res/xiaozhi04.png";
+    				setInterval(function(){
+    				var ob1=document.getElementById("xiaozhi03");
+    				if (curIndex==arr1.length-1){
+        				curIndex=0;
+    				}else{
+        				curIndex+=1;
+    				}
+    				ob1.src=arr1[curIndex];
+    				},1000);
+    				
+    				var curIndex=0;//当前下标
+    				var arr2=new Array();//图片数组
+    				arr2[0]="res/person01.png";//图片路径
+    				arr2[1]="res/person02.png";
+    				setInterval(function(){
+    				var ob2=document.getElementById("person01");
+    				if (curIndex==arr2.length-1){
+        				curIndex=0;
+    				}else{
+        				curIndex+=1;
+    				}
+    				ob2.src=arr2[curIndex];
+    				},1000);
+    				
+    				var curIndex=0;//当前下标
+    				var arr3=new Array();//图片数组
+    				arr3[0]="res/person03.png";//图片路径
+    				arr3[1]="res/person04.png";
+    				setInterval(function(){
+    				var ob3=document.getElementById("person03");
+    				if (curIndex==arr3.length-1){
+        				curIndex=0;
+    				}else{
+        				curIndex+=1;
+    				}
+    				ob3.src=arr3[curIndex];
+    				},1000);
+    				
+    				var curIndex=0;//当前下标
+    				var arr4=new Array();//图片数组
+    				arr4[0]="res/person05.png";//图片路径
+    				arr4[1]="res/person06.png";
+    				setInterval(function(){
+    				var ob4=document.getElementById("person05");
+    				if (curIndex==arr4.length-1){
+        				curIndex=0;
+    				}else{
+        				curIndex+=1;
+    				}
+    				ob4.src=arr4[curIndex];
+    				},1000);
+    				
+    				
+    		</script>
 			
 		</div>
 	</body>

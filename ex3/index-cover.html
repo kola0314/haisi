@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>实验3 网页布局-横向全屏缩放(cover)</title>
+		<style>
+			html,body{
+				width: 100%;
+				height: 100%;     /* 方便下面标签通过百分比设置大小 */
+				margin: 0px;
+				padding: 0px;   /* 全覆盖 */
+			}
+			#main {							
+				width: 100%;
+				height: 100%;
+				min-width: 500px;
+				zoom: 1;				
+				background-image: url("res/bg1.jpg");   /* 背景图片 */
+				background-repeat:no-repeat;
+				background-size:cover;
+				margin: 0px auto;    /* 居中显示 */
+			}
+			
+			.firstBuilding{
+				width: 40%;
+				position: relative;   /* 绝对定位设置玉米楼位置 */
+				left: 33%;
+				 
+			}
+	        .firstBuilding:hover{
+	        	width: 50%;   /* 鼠标移动到图片上图片放大 告诉用户可以点击 */
+	        	cursor: pointer;``
+	        }
+		</style>
+		<!-- 二级地图链接 -->
+		<link rel="stylesheet" href="css/main.css" type="text/css">   
+	</head>
+
+	<body>
+		<div id="main">
+		<div class="imgfirst">
+			<!-- 点击图片跳转至二级地图 -->
+			<a href="index.html">
+				<img class="firstBuilding" src="res/firstbuilding.png"/>   
+			</a>
+		</div>
+        
+		</div>
+	</body>
+</html>
