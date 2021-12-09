@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>实验3 网页布局-横向全屏缩放(cover)</title>
+		<title>宁波map1</title>
 		<style>
 			html,body{
 				width: 100%;
@@ -25,13 +25,26 @@
 			}
 			
 			.firstBuilding{
-				width: 40%;
-				position: relative;   /* 绝对定位设置玉米楼位置 */
-				left: 33%;
+				width: 15%;
+				position: absolute;   /* 绝对定位设置玉米楼位置 */
+				left: 42%;
+				top: 20%;
 				 
 			}
 	        .firstBuilding:hover{
-	        	width: 50%;   /* 鼠标移动到图片上图片放大 告诉用户可以点击 */
+	        	width: 20%;   /* 鼠标移动到图片上图片放大 告诉用户可以点击 */
+	        	cursor: pointer;``
+	        }
+	        
+	        .building{
+				width: 25%;
+				position: absolute;   /* 绝对定位设置玉米楼位置 */
+				right: 65%;
+				top: 45%;
+				 
+			}
+			.building:hover{
+	        	width: 30%;   
 	        	cursor: pointer;``
 	        }
 		</style>
@@ -45,6 +58,10 @@
 			<!-- 点击图片跳转至二级地图 -->
 			<a href="index.html">
 				<img class="firstBuilding" src="res/firstbuilding.png"/>   
+			</a>
+			
+			<a href="newmap.html">
+				<img class="building" src="res/building.png"/>   
 			</a>
 		</div>
         

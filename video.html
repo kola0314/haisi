@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>宁波</title>
+		<style>
+			html,body{
+				width: 100%;
+				height: 100%;     /* 方便下面标签通过百分比设置大小 */
+				margin: 0px;
+				padding: 0px;   /* 全覆盖 */
+			}
+			#main {							
+				width: 100%;
+				height: 100%;
+				min-width: 500px;
+				zoom: 1;				
+				background-image: url("res/bg3.png");   /* 背景图片 */
+				background-repeat:no-repeat;
+				background-size:cover;
+				margin: 0px auto;    /* 居中显示 */
+				overflow: hidden;
+			}
+			
+	        .view{
+	        	margin: 200px auto;
+	        	text-align: center;
+	        	position: relative;
+	        }
+	        .last{
+	        	position: absolute;
+	        	left: 50px;
+	        	top: 400px;
+	        	width: 100px;
+	        }
+	        .next{
+	        	position: absolute;
+	        	right: 50px;
+	        	top: 400px;
+	        	width: 100px;
+	        }
+	        .close{
+	        	position: absolute;
+	        	right: 50px;
+	        	top: 50px;
+	        	width: 50px;
+	        	cursor: pointer;
+	        }
+		</style>
+		<!-- 二级地图链接 -->
+		<link rel="stylesheet" href="css/main.css" type="text/css">   
+		
+		<script>
+			
+      var a = 1;
+      function last(){
+        a--;
+        if(a <=1 ){
+            a = 1;
+        }
+        var vo = document.getElementById("vo");  
+        vo.src = "res/shipin"+a+".mp4";
+      }
+      function next(){
+        a++;
+        if(a >= 4){
+            a = 4;
+        }
+        var vo = document.getElementById("vo");  
+        vo.src = "res/shipin"+a+".mp4";
+      }
+
+		</script>
+	</head>
+
+	<body>
+		<div id="main">
+			
+		<div class="view">
+            <video id="vo" width="1000"  autoplay="autoplay" controls="controls">
+				<source src="res/shipin1.mp4" type="audio/mp4"></source>
+			</video>
+       	</div> 
+       		 
+       		<!--控制按扭-->
+      	<div id="controls">
+         	 <img src = "res/last.png" class = "last" onclick="last()" />
+         	 <img src = "res/next.png" class = "next" onclick="next()" />
+      </div>
+        <img src = "res/关闭.png" class="close" />	
+        
+        <a href="index.html">
+				<img src = "res/关闭.png" class="close" /> 
+			</a>
+		</div>
+	</body>
+</html>

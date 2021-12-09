@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>寻找小知</title>
+		<style>		
+			html,body{
+				width: 100%;
+				height: 100%;
+				margin: 0px;
+			}	
+			a{
+				color:#00868B;				
+			}		
+			#main {	
+				width: 100%;
+				height: 100%;						
+				min-width: 500px;	
+				background-image: url("res/newmap.jpg");			
+				background-repeat:no-repeat;
+				background-size:cover;
+				margin: 0px auto;
+				overflow: hidden;
+				position: absolute;
+			}	 
+			
+			.back {
+				position: absolute;
+				width: 30%;
+				left: 0%;
+				top:0%;
+				z-index: 2;
+			}
+			
+			
+			#person01 {
+				position: absolute;
+				width: 9%;
+				left: 5%;
+				top: 70%;
+				z-index: 3;
+			}
+			#person02 {
+				position: absolute;
+				width: 10%;
+				right: 55%;
+				top: 50%;
+				z-index: 3;
+			}
+			#person03{
+				position: absolute;
+				width: 10%;
+				left: 0%;
+				top: 50%;
+				z-index: 3;
+			}
+			#person04{
+				position: absolute;
+				width: 8%;
+				left: 47%;
+				top: 50%;
+				z-index: 3;
+			}
+			#person05{
+				position: absolute;
+				width: 6%;
+				left: 20%;
+				top: 75%;
+				z-index: 3;
+			}
+			
+			#person06{
+				position: absolute;
+				width: 7%;
+				left: 65%;
+				top: 73%;
+				z-index: 3;
+			}
+			
+		</style>
+		<link rel="stylesheet" href="css/main.css" type="text/css">
+	</head>
+
+	<body>
+		<div id="main">
+			<div class="buildings">
+    		 
+    		
+				<img id="person01" />
+			
+				<img id="person02" />	
+		
+				<img id="person03" />
+			
+				<img id="person04" />
+			
+				<img id="person05" />
+				
+				<a href="newvideo.html">
+				<img id="person06" />
+				</a>
+				<a href="index-cover.html">
+					<img id="back" src="res/back1.png" />
+				</a>
+    		</div>
+    		<script>
+    			    var curIndex=0;//当前下标
+    				var arr=new Array();//图片数组
+    				arr[0]="res/小人01.png";//图片路径
+    				arr[1]="res/小人02.png";
+    				setInterval(function(){
+    				var ob=document.getElementById("person01");
+    				if (curIndex==arr.length-1){
+        				curIndex=0;
+    				}else{
+        				curIndex+=1;
+    				}
+    				ob.src=arr[curIndex];
+    				},1000);
+    				
+    				var curIndex=0;//当前下标
+    				var arr1=new Array();//图片数组
+    				arr1[0]="res/小人03.png";//图片路径
+    				arr1[1]="res/小人04.png";
+    				setInterval(function(){
+    				var ob1=document.getElementById("person02");
+    				if (curIndex==arr1.length-1){
+        				curIndex=0;
+    				}else{
+        				curIndex+=1;
+    				}
+    				ob1.src=arr1[curIndex];
+    				},1000);
+    				
+    				var curIndex=0;//当前下标
+    				var arr2=new Array();//图片数组
+    				arr2[0]="res/小人05.png";//图片路径
+    				arr2[1]="res/小人06.png";
+    				setInterval(function(){
+    				var ob2=document.getElementById("person03");
+    				if (curIndex==arr2.length-1){
+        				curIndex=0;
+    				}else{
+        				curIndex+=1;
+    				}
+    				ob2.src=arr2[curIndex];
+    				},1000);
+    				
+    				var curIndex=0;//当前下标
+    				var arr3=new Array();//图片数组
+    				arr3[0]="res/小人07.png";//图片路径
+    				arr3[1]="res/小人08.png";
+    				setInterval(function(){
+    				var ob3=document.getElementById("person04");
+    				if (curIndex==arr3.length-1){
+        				curIndex=0;
+    				}else{
+        				curIndex+=1;
+    				}
+    				ob3.src=arr3[curIndex];
+    				},1000);
+    				
+    				var curIndex=0;//当前下标
+    				var arr4=new Array();//图片数组
+    				arr4[0]="res/小人09.png";//图片路径
+    				arr4[1]="res/小人10.png";
+    				setInterval(function(){
+    				var ob4=document.getElementById("person05");
+    				if (curIndex==arr4.length-1){
+        				curIndex=0;
+    				}else{
+        				curIndex+=1;
+    				}
+    				ob4.src=arr4[curIndex];
+    				},1000);
+    				
+    				
+    				var curIndex1=0;//当前下标
+    				var arr5=new Array();//图片数组
+    				arr5[0]="res/小人11.png";//图片路径
+    				arr5[1]="res/小人12.png";
+    				setInterval(function(){
+    				var ob5=document.getElementById("person06");
+    				if (curIndex1==arr5.length-1){
+        				curIndex1=0;
+    				}else{
+        				curIndex1+=1;
+    				}
+    				ob5.src=arr5[curIndex1];
+    				},1000);
+    				
+    		</script>
+			
+		</div>
+	</body>
+</html>
