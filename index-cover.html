@@ -47,13 +47,38 @@
 	        	width: 30%;   
 	        	cursor: pointer;``
 	        }
+	        #move{
+	        	
+	        	right: 100%;
+	        	position: absolute;
+	        	animation:moveDiv 15s ease ;
+	        	z-index: 3;
+	        }
+	        @keyframes moveDiv {
+
+                0%{right: 100%;}
+                /*10%{right: 75%;}*/
+                20%{right: 50%;}
+                /*30%{right: 25%;}*/
+                40%{right: 0%;}
+                /*50%{right: -25%;}*/
+                60%{right: -30%;}
+                /*70%{right: -75%;}*/
+                /*80%{right: -100%;}*/
+                /*90%{right: -30%;}
+                100%{right: -60%;}*/
+        }
 		</style>
 		<!-- 二级地图链接 -->
 		<link rel="stylesheet" href="css/main.css" type="text/css">   
 	</head>
 
 	<body>
+		<div id="move" >
+			<img src="res/animation.png" />
+		</div>
 		<div id="main">
+			
 		<div class="imgfirst">
 			<!-- 点击图片跳转至二级地图 -->
 			<a href="index.html">

@@ -33,6 +33,13 @@
 				top:0%;
 				z-index: 2;
 			}
+			/*.wenzi2{
+				position: absolute;
+				width: 5%;
+				left: 5%;
+				top: 70%;
+				z-index: 4;
+			}*/
 			
 			
 			#person01 {
@@ -86,10 +93,10 @@
 	<body>
 		<div id="main">
 			<div class="buildings">
-    		 
-    		
-				<img id="person01" />
-			
+				<a href="periphery.html">
+				<img id="person01"  title="购买周边"/>
+				</a>
+				<!--<img class="wenzi2" src="res/wenzi2.jpg" />-->
 				<img id="person02" />	
 		
 				<img id="person03" />
@@ -99,13 +106,13 @@
 				<img id="person05" />
 				
 				<a href="newvideo.html">
-				<img id="person06" />
+				<img id="person06" title="视频介绍"/>
 				</a>
 				<a href="index-cover.html">
-					<img id="back" src="res/back1.png" />
+					<img id="back" src="res/back1.png" title="返回"/>
 				</a>
     		</div>
-    		<script>
+    		<script type="text/javascript">
     			    var curIndex=0;//当前下标
     				var arr=new Array();//图片数组
     				arr[0]="res/小人01.png";//图片路径
@@ -177,9 +184,9 @@
     				},1000);
     				
     				
-    				var curIndex1=0;//当前下标
-    				var arr5=new Array();//图片数组
-    				arr5[0]="res/小人11.png";//图片路径
+    				var curIndex1=0;
+    				var arr5=new Array();
+    				arr5[0]="res/小人11.png";
     				arr5[1]="res/小人12.png";
     				setInterval(function(){
     				var ob5=document.getElementById("person06");
@@ -191,6 +198,11 @@
     				ob5.src=arr5[curIndex1];
     				},1000);
     				
+    				
+    				function wenzi(){
+    					var m = document.getElenmentById("person01");
+    					m.src = "res/wenzi2.jpg";
+    				}
     		</script>
 			
 		</div>
