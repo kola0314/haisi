@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>宁波周边</title>
+		<style>
+			html,body{
+				width: 100%;
+				height: 100%;     /* 方便下面标签通过百分比设置大小 */
+				margin: 0px;
+				padding: 0px;   /* 全覆盖 */ 
+				overflow: hidden;
+			} 
+			#main {							
+				width: 100%;
+				height: 100%;
+				min-width: 500px;
+				zoom: 1;				
+				background-image: url("res/bg4.jpg");   /* 背景图片 */
+				background-repeat:no-repeat;
+				background-size:cover;
+				margin: 0px auto;    /* 居中显示 */
+				
+			}
+			
+			
+			#title{
+				color: coral;
+				text-align: center;
+				font-size: 100px;
+				font-family:collegiate-normal;
+				font-weight: bolder;
+				
+			}
+			
+			
+			
+			.close{
+	        	position: absolute;
+	        	right: 50px;
+	        	top: 50px;
+	        	width: 50px;
+	        	cursor: pointer;
+	        }
+	        section{
+      	width:700px;
+      	height:800px;
+      	text-align:center;
+      	margin:70px auto;
+      }
+      section div{
+		margin:20px;
+      }
+      section div img{
+		margin:20px;
+      	border-radius:10px;
+      	box-shadow:5px 5px 5px 5px rgba(0,0,0,0.5);
+      	cursor:pointer;
+      	width:100px;
+      	height:100px;
+      }
+      #clean{
+		width:150px;
+      	height:45px;
+      	margin:20px auto;
+      	border-radius:5px;
+      	background-color:chocolate;
+      	color:#FFFFFF;
+      	border-style:none;
+      	outline:0px;
+      	cursor:pointer;
+      	box-shadow:5px 5px 5px 5px rgba(0,0,0,0.5);
+      	padding-top: 25px;
+      	font-size: larger;
+      	font-weight: bolder;
+      }
+    	
+      #video{
+      	width: 420px;
+      	height: 320px;
+      	position: absolute;
+        left: 700px;
+        top: 200px;
+        background-color: #00868B;
+        color: wheat;
+        border-radius: 20px;
+        line-height: 70px;
+        font-size: 40px;
+        text-align: center;
+        padding: 20px;
+        padding-top:70px ;
+        display: none;
+      } 
+      
+      #zhoubian{
+      	width: 420px;
+      	height: 320px;
+      	position: absolute;
+        left: 700px;
+        top: 200px;
+        background-color: #00868B;
+        color: wheat;
+        border-radius: 20px;
+        line-height: 70px;
+        font-size: 40px;
+        text-align: center;
+        padding: 20px;
+        padding-top:70px ;
+        display: none;
+      }  
+      a:link{
+      	color:plum;
+      		text-decoration:none;
+      }  
+      
+      #xiaochuangclose1{
+      	position: absolute;
+      	right: 10px;
+      	top: 10px;
+      	width:30px;
+      	height: 30px;
+      }  
+      #xiaochuangclose2{
+      	position: absolute;
+      	right: 10px;
+      	top: 10px;
+      	width:30px;
+      	height: 30px;
+      }      
+		</style>
+		<!-- 二级地图链接 -->
+		<link rel="stylesheet" href="css/main.css" type="text/css"> 
+		<script type="text/javascript" src="http://www.yyfun001.com/res/jquery/jquery-1.8.3.min.js"></script>
+		<script  type="text/javascript">
+			$(function(){
+    	  $("img").click(function(){
+    		  var rand = Math.round(Math.random()*4);
+    		 
+    		  $(this).attr("src","res/zhongjiang"+rand+".jpg");
+    		  if(rand ==2){  	
+    		  	$("#video").toggle();
+    		  	$(".close").attr("src","res/关闭.png");
+    		  }
+    		  
+    		  if(rand ==3){  	
+    		  	$("#zhoubian").toggle();
+    		  	$(".close").attr("src","res/关闭.png");
+    		  } 
+    	  });
+    	  
+    	  $("#clean").click(function(){
+    		  $("img").attr("src","res/choujiang.jpg");
+    		  $(".close").attr("src","res/关闭.png");
+    	  });
+    	  
+    	  $("#xiaochuangclose1").click(function(){
+    	  	  $(".close").attr("src","res/关闭.png");
+    		  $("#video").toggle();
+    		  
+    	  });
+    	  
+    	  $("#xiaochuangclose2").click(function(){
+    	  	  $(".close").attr("src","res/关闭.png");
+    		  $("#zhoubian").toggle();
+    		  
+    	  });
+     }) 
+    
+		</script>
+	</head>
+
+	<body>
+		<div id="main">
+		   <div id = "title">翻翻乐</div>
+		   
+		   <section>
+		   	<div id="clean">重 新 开 始</div>
+		   	<div><img src="res/choujiang.jpg">  
+		   	<img src="res/choujiang.jpg">    
+		   	<img src="res/choujiang.jpg">    
+		   	<img src="res/choujiang.jpg"></div>
+		   	<div><img src="res/choujiang.jpg"> 
+		   	<img src="res/choujiang.jpg">      
+		   	<img src="res/choujiang.jpg">    
+		   	<img src="res/choujiang.jpg"></div>
+		   	<div><img src="res/choujiang.jpg"> 
+		   	<img src="res/choujiang.jpg">     
+		   	<img src="res/choujiang.jpg">      
+		   	<img src="res/choujiang.jpg"></div>
+		   	<div><img src="res/choujiang.jpg">  
+		   	<img src="res/choujiang.jpg">     
+		   	<img src="res/choujiang.jpg">   
+		   	<img src="res/choujiang.jpg"></div>
+		   </section>
+		    
+		    
+		    <div id="video"  >
+		    	恭喜抽中观看宁波小视频，一起来看看吧~</br></br>
+		    	<a href="video.html" target="_blank">
+				 进入
+			    </a>
+			    <img src = "res/关闭.png" class="close" id="xiaochuangclose1" /> 
+		    </div>
+		    
+		    <div id="zhoubian"  >
+		    	恭喜抽中免费购买周边机会~</br></br>
+		    	<a href="periphery.html"  target="_blank">
+				 进入
+			    </a>
+			    <img src = "res/关闭.png" class="close" id="xiaochuangclose2" /> 
+		    </div>
+		    
+		    <a href="index.html" >
+				<img src = "res/关闭.png" class="close" /> 
+			</a>
+		</div>
+		 
+	</body>
+</html>
